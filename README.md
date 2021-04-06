@@ -11,7 +11,7 @@ Dar suporte básico à programação orientada à objetos em Imp2.
 1. Exemplo de declaração de classe. Neste exemplo a classe `C` é declarada com 
    o atributo `x` e dois métodos: um construtor (obrigatório) que deve ter o mesmo 
    nome da classe e o método `m` que recebe um parâmetro.  
-   ```
+   ```python
     class C {
       var x = 0 ;
       def C(a) {
