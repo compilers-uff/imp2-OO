@@ -43,7 +43,8 @@ var y = 0 ;
 var x = new C(2) ;
 y := x.mB(z) ;
 ```
-1. Exemplo de sobrecarga de operadores (operator overloading, ou _ad hoc_ polimorfism). Um nome de método pode ser sobrecarregado, isto é, declarado em diferentes classes. No entanto, se as classes que declaram o operador polimórfico estiverem na mesms hierarquia, o operador deve possuir um número diferente de parâmetros em cada declaração.
+1. Exemplo de sobrecarga de operadores (operator overloading, ou _ad hoc_ polimorfism). Um nome de método pode ser sobrecarregado, isto é, declarado em diferentes classes. No entanto, se as classes que declaram o operador polimórfico estiverem na mesms hierarquia, 
+o operador deve possuir um número diferente de parâmetros em cada declaração.  
 ```
 class O {
   # ...
@@ -69,7 +70,8 @@ o.m(0,1) ; # Chamada ao método m da classe C.
   denotando o corpo da classe. 
   - Declaração de herança.
     Quando uma classe herdar de outra, esta informação deve ficar registrada no ambiente também, associada a classe herdeira. 
-    Com isso, uma declaração deve ser entendida como um binding do identificador da classe à um par com a primeira projeção 
+   
+- Uma declaração deve ser entendida como um binding do identificador da classe à um par com a primeira projeção 
     sendo a _closure_ que denota o corpo da classe e a segunda projeção contém o identificador da classe base. 
 - Comando `return`
 - Expressão `new`
