@@ -79,4 +79,4 @@ o.m(0,1) ; # Chamada ao método m da classe C.
   e uma **cópia** da _closure_ que denota a classe sendo instanciada, após a execução do construtor. 
 - Expressão `self`. 
 - Comando para chamada de método. Uma chamada de método deve ser entendida como uma chamada de função no contexto da closure que 
-  define o objeto, estendendo o contexto global. 
+  define o objeto, estendendo o contexto apropriado. 
