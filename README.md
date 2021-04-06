@@ -20,12 +20,10 @@ class C {
   }
 }
 ```
-
 1. Exemplo de instanciação. A expressão `new` recebe uma outra expressão por parâmetro que deve ser composta por um identificador que dá nome a uma classe e uma lista de parâmetros atuais, que serão passados ao construtor da classe dada.
 ```
 var x = new C(2) ;
 ```
-
 1. Exemplo de herança. Ao declararmos uma classe podemos dizer que ela herda atributos e métodos de (uma única) outra classe, como na declaração da classe `C` abaixo, que herda (todos) os atributos e métodos da classe `O`.
 ```
 class O {
@@ -45,7 +43,6 @@ var y = 0 ;
 var x = new C(2) ;
 y := x.mB(z) ;
 ```
-
 1. Exemplo de sobrecarga de operadores (operator overloading, ou _ad hoc_ polimorfism). Um nome de método pode ser sobrecarregado, isto é, declarado em diferentes classes. No entanto, se as classes que declaram o operador polimórfico estiverem na mesms hierarquia, o operador deve possuir um número diferente de parâmetros em cada declaração.
 ```
 class O {
