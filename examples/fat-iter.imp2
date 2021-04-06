@@ -1,0 +1,11 @@
+# Iterative factorial
+def fat (x) {
+    var z = x, y = 1 ;
+    while (z > 0)
+    {
+	y := y * z ;
+  	z := z - 1 ;
+	print(y)
+    } 
+} 
+fat(2) 
