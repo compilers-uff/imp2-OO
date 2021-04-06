@@ -100,5 +100,3 @@ Dar suporte básico à programação orientada à objetos em Imp2.
 
 A menos do comando `return`, que deve estender &Pi; IR como uma nova construção `Ret` e o &Pi; autômato para comandos, 
 todo o restante deve ser implementado como &Pi; denotações, isto é, um mapeamento entre a sintaxe da Imp2 e &Pi; IR.
-
-1. Implementação das &Pi; denotações. (Arquivo `impiler.py`.)
