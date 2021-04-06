@@ -77,6 +77,14 @@ o.m(0,1) ; # Chamada ao método m da classe C.
 - Expressão `new`. A expressão `new` só pode ser utilizada do lado direito de uma declaração. É parametrizada por um identificador ou 
   um identificador seguido de uma lista de expressões. Tem como semântica a criação de um binding entre o identificador do lado esquerdo 
   e uma **cópia** da _closure_ que denota a classe sendo instanciada, após a execução do construtor. 
-- Expressão `self`. 
+- Expressão `self`. Os atributos de uma classe devem coexistir com variáveis no ambiente global e local. A expressão `self` serve 
+  para resolver um eventual conflito de nomes. 
 - Comando para chamada de método. Uma chamada de método deve ser entendida como uma chamada de função no contexto da closure que 
   define o objeto, estendendo o contexto apropriado. 
+
+## Entregáveis
+
+1. Especificação da nova gramática de Imp2. 
+1. Especificação das pi denotações.
+
+
