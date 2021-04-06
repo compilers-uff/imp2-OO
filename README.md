@@ -8,22 +8,26 @@ Dar suporte básico à programação orientada à objetos em Imp2.
 
 ## Exemplos das construções OO em Imp2
 
-1. Exemplo de declaração de classe. Neste exemplo a classe `C` é declarada com o atributo `x` e dois métodos: um construtor (obrigatório) que deve ter o mesmo nome da classe e o método m que recebe um parâmetro.  
-```
-class C {
-  var x = 0 ;
-  def C(a) {
-    self.x := a ;
-  }
-  def m(a) {
-    self.x := a ;
-  }
-}
-```  
-1. Exemplo de instanciação. A expressão `new` recebe uma outra expressão por parâmetro que deve ser composta por um identificador que dá nome a uma classe e uma lista de parâmetros atuais, que serão passados ao construtor da classe dada.
-```
-var x = new C(2) ;
-```   
+1. Exemplo de declaração de classe. Neste exemplo a classe `C` é declarada com 
+   o atributo `x` e dois métodos: um construtor (obrigatório) que deve ter o mesmo 
+   nome da classe e o método `m` que recebe um parâmetro.  
+   ```
+    class C {
+      var x = 0 ;
+      def C(a) {
+        self.x := a ;
+      }
+      def m(a) {
+        self.x := a ;
+      }
+    }
+    ```  
+1. Exemplo de instanciação. A expressão `new` recebe uma outra expressão por parâmetro 
+   que deve ser composta por um identificador que dá nome a uma classe e uma lista de 
+   parâmetros atuais, que serão passados ao construtor da classe dada.
+   ```
+   var x = new C(2) ;
+   ```     
 1. Exemplo de herança. Ao declararmos uma classe podemos dizer que ela herda atributos e métodos de (uma única) outra classe, como na declaração da classe `C` abaixo, que herda (todos) os atributos e métodos da classe `O`.
 ```
 class O {
