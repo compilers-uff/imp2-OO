@@ -6,9 +6,9 @@ Trabalho do curso de compiladores de 2020.2.
 
 Dar suporte básico à programação orientada à objetos em Imp2.
 
-## Exemplos de construções OO em Imp2
+## Exemplos das construções OO em Imp2
 
-1. Exemplo de declaração de classe. Neste exemplo a classe `C` é declarada com o atributo `x` e dois métodos: um construtor (obrigatório) que deve ter o mesmo nome da classe e o método m que recebe um parâmetro.
+1. Exemplo de declaração de classe. Neste exemplo a classe `C` é declarada com o atributo `x` e dois métodos: um construtor (obrigatório) que deve ter o mesmo nome da classe e o método m que recebe um parâmetro.  
 ```
 class C {
   var x = 0 ;
@@ -63,17 +63,20 @@ o.m(0) ; # Chamada ao método m da classe O.
 o.m(0,1) ; # Chamada ao método m da classe C.
 ```
 
-## Pi denotações
+## Pi denotações, informalmente
 
 - Declaração `class`.
   Uma declaração de classe deve associar ao identificador da classe uma _closure_, no ambiente,
   denotando o corpo da classe. 
   - Declaração de herança.
     Quando uma classe herdar de outra, esta informação deve ficar registrada no ambiente também, associada a classe herdeira. 
-   
-- Uma declaração deve ser entendida como um binding do identificador da classe à um par com a primeira projeção 
+  - Uma declaração de classe deve então ser entendida como um binding do identificador da classe à um par com a primeira projeção 
     sendo a _closure_ que denota o corpo da classe e a segunda projeção contém o identificador da classe base. 
-- Comando `return`
-- Expressão `new`
-- Expressão `self`
-- Comando para chamada de método
+- Comando `return`. O comando `return` deve ser sempre o último comando de um bloco. 
+  Recebe uma expressão como parâmetro. Sua execução deixa na pilha de valores o resultado da avaliação da expressão em seu argumento. 
+- Expressão `new`. A expressão `new` só pode ser utilizada do lado direito de uma declaração. É parametrizada por um identificador ou 
+  um identificador seguido de uma lista de expressões. Tem como semântica a criação de um binding entre o identificador do lado esquerdo 
+  e uma **cópia** da _closure_ que denota a classe sendo instanciada, após a execução do construtor. 
+- Expressão `self`. 
+- Comando para chamada de método. Uma chamada de método deve ser entendida como uma chamada de função no contexto da closure que 
+  define o objeto, estendendo o contexto global. 
