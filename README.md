@@ -64,8 +64,13 @@ o.m(0,1) ; # Chamada ao método m da classe C.
 
 ## Pi denotações
 
-- Declaração `class`
-  - Declaração de herança
+- Declaração `class`.
+  Uma declaração de classe deve associar ao identificador da classe uma _closure_, no ambiente,
+  denotando o corpo da classe. 
+  - Declaração de herança.
+    Quando uma classe herdar de outra, esta informação deve ficar registrada no ambiente também, associada a classe herdeira. 
+    Com isso, uma declaração deve ser entendida como um binding do identificador da classe à um par com a primeira projeção 
+    sendo a _closure_ que denota o corpo da classe e a segunda projeção contém o identificador da classe base. 
 - Comando `return`
 - Expressão `new`
 - Expressão `self`
