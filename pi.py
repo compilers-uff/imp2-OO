@@ -1,4 +1,3 @@
-# -*- buffer-read-only: t -*-
 from termcolor import colored
 
 #
@@ -1304,7 +1303,7 @@ class AbsPiAut(DecPiAut):
         caller = self.popVal()
         self.pushVal(self.locs())
         # Saves the current environment in the value stack.
-        self.pushVal(self.env())
+        self.pushVal(self.env().copy())
         # Retrieves the closure associated with the caller function.
         clos = self.getBindable(caller.id())
         # Retrieves the formal parameters from the closure.
@@ -1317,7 +1316,7 @@ class AbsPiAut(DecPiAut):
         # Retrieves the current environment.
         # e = self.env().copy()
         # Retrives the closure's environment.
-        ce = clos.env()      
+        ce = clos.env().copy()      
         # The caller's block must run on the closure's environment
         # overwritten with the matches.
         # e.update(ce)
@@ -1448,9 +1447,9 @@ class RecPiAut(AbsPiAut):
         # Retrieves the current environment.
         # e = self.env()
         # Retrives the recursive closure's environment.
-        rce = reclos.env()      
+        rce = reclos.env().copy()      
         # Retrives the recursive closure's recursive environment.
-        rcre = reclos.recenv()      
+        rcre = reclos.recenv().copy()      
         # The caller's block must run on the current environment
         # overwritten with the recursive (unfolded) environments and matches.
         # Is it the current env. or the reclosure's?
@@ -1460,7 +1459,7 @@ class RecPiAut(AbsPiAut):
         rce.update(unfold(rcre))
         rce.update(d)
         self["env"] = rce
-        self.pushVal(self.locs())
+        self.pushVal(self.locs().copy())
         # Saves the current environment in the value stack.
         self.pushVal(rce)
         # Pushes the keyword BLKCMD for block completion.
